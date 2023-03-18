@@ -1,11 +1,7 @@
-import 'package:flutter_application_001/models/location.dart';
-import 'package:flutter_application_001/models/location_fact.dart';
+import '../models/location.dart';
+import '../models/location_fact.dart';
 
 mixin MockLocation implements Location {
-  // MockLocation({required super.name, required super.url, required super.facts});
-
-  // MockLocation({required super.name, required super.url, required super.facts});
-
   static final List<Location> items = [
     Location(
         name: 'Arashiyama Bamboo Grove',
@@ -83,5 +79,9 @@ mixin MockLocation implements Location {
 
   static List<Location> fetchAll() {
     return items;
+  }
+
+  static Location fetch(int index) {
+    return MockLocation.items[index];
   }
 }
